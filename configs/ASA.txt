@@ -1,0 +1,74 @@
+hostname ASA
+enable password 8Ry2YjIyt7RRXU24 encrypted
+xlate per-session deny tcp any4 any4
+xlate per-session deny tcp any4 any6
+xlate per-session deny tcp any6 any4
+xlate per-session deny tcp any6 any6
+xlate per-session deny udp any4 any4 eq domain
+xlate per-session deny udp any4 any6 eq domain
+xlate per-session deny udp any6 any4 eq domain
+xlate per-session deny udp any6 any6 eq domain
+names
+!
+interface Ethernet0
+ nameif OUTSIDE
+ security-level 0
+ ip address 192.168.1.2 255.255.255.0 
+!
+interface Ethernet1
+ nameif INSIDE
+ security-level 50
+ ip address 192.168.2.1 255.255.255.0 
+!             
+interface Ethernet2
+ nameif SERVERS
+ security-level 100
+ ip address 192.168.10.2 255.255.255.0 
+!             
+interface Ethernet3
+ shutdown     
+ no nameif    
+ no security-level
+ no ip address
+!             
+ftp mode passive
+clock timezone ICT 7
+access-list OUTSIDE extended permit icmp any any echo-reply 
+access-list OUTSIDE extended permit icmp 192.168.11.0 255.255.255.0 any echo 
+access-list OUTSIDE extended permit tcp 192.168.11.0 255.255.255.0 192.168.10.0 255.255.255.0 
+access-list OUTSIDE extended permit udp 192.168.11.0 255.255.255.0 192.168.10.0 255.255.255.0 
+access-list OUTSIDE extended permit icmp 192.168.12.0 255.255.255.0 any echo 
+access-list OUTSIDE extended permit tcp 192.168.12.0 255.255.255.0 192.168.10.0 255.255.255.0 
+access-list OUTSIDE extended permit udp 192.168.12.0 255.255.255.0 192.168.10.0 255.255.255.0 
+access-list INSIDE extended permit icmp any any echo-reply 
+access-list INSIDE extended permit icmp any 192.168.10.0 255.255.255.0 echo 
+access-list INSIDE extended permit tcp any any 
+access-list INSIDE extended permit udp any any 
+access-list INSIDE extended permit icmp any any echo 
+pager lines 24
+mtu OUTSIDE 1500
+mtu INSIDE 1500
+mtu SERVERS 1500
+no failover   
+icmp unreachable rate-limit 1 burst-size 1
+asdm image disk0:/asdm-733.bin
+no asdm history enable
+arp timeout 14400
+no arp permit-nonconnected
+access-group OUTSIDE in interface OUTSIDE
+access-group INSIDE in interface INSIDE
+!             
+router ospf 1 
+ network 192.168.1.0 255.255.255.0 area 0
+ network 192.168.2.0 255.255.255.0 area 0
+ network 192.168.10.0 255.255.255.0 area 0
+ log-adj-changes
+!             
+route OUTSIDE 0.0.0.0 0.0.0.0 192.168.1.1 1 
+route INSIDE 192.168.3.0 255.255.255.0 192.168.2.2 1 
+route INSIDE 192.168.4.0 255.255.255.0 192.168.2.2 1 
+route INSIDE 192.168.5.0 255.255.255.0 192.168.2.2 1 
+route INSIDE 192.168.6.0 255.255.255.0 192.168.2.2 1 
+route INSIDE 192.168.7.0 255.255.255.0 192.168.2.2 1 
+route INSIDE 192.168.8.0 255.255.255.0 192.168.2.2 1 
+route INSIDE 192.168.9.0 255.255.255.0 192.168.2.2 1 

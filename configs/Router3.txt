@@ -1,0 +1,75 @@
+ip dhcp pool CS3
+ network 192.168.12.0 255.255.255.0
+ default-router 192.168.12.1 
+ dns-server 192.168.10.6 
+!         
+!         
+!         
+ip cef    
+no ipv6 cef
+!         
+multilink bundle-name authenticated
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+cts logging verbose
+!         
+!         
+!         
+redundancy
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+!         
+interface Ethernet0/0
+ ip address dhcp
+!         
+interface Ethernet0/1
+ ip address 192.168.12.1 255.255.255.0
+!         
+interface Ethernet0/2
+ no ip address
+ shutdown 
+!         
+interface Ethernet0/3
+ no ip address
+ shutdown 
+!         
+interface Serial1/0
+ no ip address
+ shutdown 
+ serial restart-delay 0
+!         
+interface Serial1/1
+ ip address 3.0.0.2 255.0.0.0
+ serial restart-delay 0
+!         
+interface Serial1/2
+ ip address 2.0.0.2 255.0.0.0
+ serial restart-delay 0
+!         
+interface Serial1/3
+ no ip address
+ shutdown 
+ serial restart-delay 0
+!         
+router ospf 1
+ network 2.0.0.0 0.255.255.255 area 0
+ network 3.0.0.0 0.255.255.255 area 0
+ network 192.168.12.0 0.0.0.255 area 0
+ network 192.168.100.0 0.0.0.255 area 0
