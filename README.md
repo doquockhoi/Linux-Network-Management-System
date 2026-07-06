@@ -97,8 +97,6 @@ Linux-Network-Management-System
 - Cảnh báo qua Telegram.
 - Quản trị từ xa qua Guacamole (SSH/RDP, MFA).
 - Website nội bộ bằng Apache2.
-# 📸 Hình ảnh hệ thống
-
 
 
 ## 📸 Hình ảnh hệ thống
