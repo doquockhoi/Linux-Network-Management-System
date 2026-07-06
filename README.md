@@ -1,5 +1,11 @@
 # 🖥️ Hệ thống Quản trị Mạng Linux cho Khoa Điện tử
-
+![Cisco](https://img.shields.io/badge/Cisco-IOS-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+![EVE-NG](https://img.shields.io/badge/EVE--NG-Network%20Lab-blue?style=for-the-badge)
+![ASA](https://img.shields.io/badge/Cisco-ASA-red?style=for-the-badge)
+![Zabbix](https://img.shields.io/badge/Zabbix-Monitoring-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
+![Samba](https://img.shields.io/badge/Samba-Active%20Directory-0F5E9C?style=for-the-badge)
+![Apache](https://img.shields.io/badge/Apache-Web%20Server-D22128?style=for-the-badge&logo=apache&logoColor=white)
 > Đồ án tốt nghiệp – Đại học Công nghiệp Hà Nội (HaUI)
 
 ## 📌 Giới thiệu
@@ -95,30 +101,19 @@ Linux-Network-Management-System
 
 
 
-## DHCP-Config
+## 📸 Hình ảnh hệ thống
 
-![DHCP](screenshots/dhcp-config.jpg)
+| DHCP Configuration | DHCP Working |
+|:------------------:|:------------:|
+| ![](screenshots/dhcp-config.jpg) | ![](screenshots/dhcp-working.jpg) |
 
-## DHCP-Working
+| DNS Server | Web Server |
+|:----------:|:----------:|
+| ![](screenshots/dns-working.jpg) | ![](screenshots/Web.jpg) |
 
-![DHCP](screenshots/dhcp-working.jpg)
-
-## DNS
-
-![DNS](screenshots/dns-working.jpg)
-
-## Web Server
-
-![Web](screenshots/Web.jpg)
-
-## Zabbix
-
-![Zabbix](screenshots/zabbix-running.jpg)
-
-## SSH
-
-![SSH](screenshots/SSH-running.jpg)
-
+| Zabbix Monitoring | SSH Remote Access |
+|:-----------------:|:-----------------:|
+| ![](screenshots/zabbix-running.jpg) | ![](screenshots/SSH-running.jpg) |
 # ⚙️ Cấu hình
 
 Các file cấu hình của Router, Switch và Firewall được lưu trong thư mục `configs/`.
