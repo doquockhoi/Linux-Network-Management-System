@@ -1,12 +1,18 @@
 # 🖥️ Hệ thống Quản trị Mạng Linux cho Khoa Điện tử
-![Cisco](https://img.shields.io/badge/Cisco-IOS-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
-![EVE-NG](https://img.shields.io/badge/EVE--NG-Network%20Lab-blue?style=for-the-badge)
-![ASA](https://img.shields.io/badge/Cisco-ASA-red?style=for-the-badge)
-![Zabbix](https://img.shields.io/badge/Zabbix-Monitoring-D40000?style=for-the-badge&logo=zabbix&logoColor=white)
-![Samba](https://img.shields.io/badge/Samba-Active%20Directory-0F5E9C?style=for-the-badge)
-![Apache](https://img.shields.io/badge/Apache-Web%20Server-D22128?style=for-the-badge&logo=apache&logoColor=white)
-> Đồ án tốt nghiệp – Đại học Công nghiệp Hà Nội (HaUI)
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Cisco-IOS-1BA0D7?style=for-the-badge&logo=cisco&logoColor=white">
+  <img src="https://img.shields.io/badge/Linux-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white">
+  <img src="https://img.shields.io/badge/EVE--NG-Network%20Lab-blue?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Cisco-ASA-red?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Zabbix-Monitoring-D40000?style=for-the-badge&logo=zabbix&logoColor=white">
+  <img src="https://img.shields.io/badge/Samba-Active%20Directory-0F5E9C?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Apache-Web%20Server-D22128?style=for-the-badge&logo=apache&logoColor=white">
+</p>
+
+<p align="center">
+Đồ án tốt nghiệp – Đại học Công nghiệp Hà Nội (HaUI)
+</p>
 
 ## 📌 Giới thiệu
 Dự án mô phỏng và triển khai hệ thống quản trị mạng doanh nghiệp trên **EVE-NG**, kết hợp thiết bị Cisco và các dịch vụ Linux nhằm xây dựng hạ tầng mạng an toàn, ổn định, dễ quản trị và dễ mở rộng.
